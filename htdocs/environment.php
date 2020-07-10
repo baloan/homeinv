@@ -1,20 +1,6 @@
 <?php
 
-	// edit the following constants with your home inventory root...
-	define('SITE_PATH', '/var/www/localhost/home_inventory/');
-	// smarty package installation path (depends on your linux distribution)...
-	define('SMARTY_DIR', '/usr/share/php/smarty/');
-	// MySQL info
-	define('MYSQL_DATABASE_NAME', 'home_inventory');
-	define('MYSQL_USER', 'homeinv');
-	define('MYSQL_PASSWD', 'your_password');
-	define('MYSQL_SERVER_HOSTNAME', 'your_hostname');
-	// home inventory's login user...
-	define('HOMEINV_USERNAME', 'username');
-	define('HOMEINV_PASSWD', 'passwd');	
-
-	// default accepted picture size 120KB
-	define('PICTURE_MAXSIZE', 122880);
+        require_once(__DIR__ . "/config.php");
 	
 	require_once(SMARTY_DIR . 'Smarty.class.php');
 	
