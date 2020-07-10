@@ -23,9 +23,9 @@
 	session_start();
 	
 	// Connecting, selecting database
-	$link = mysql_connect(MYSQL_SERVER_HOSTNAME, MYSQL_USER, MYSQL_PASSWD)
-		or die('Could not connect: ' . mysql_error());
-	mysql_select_db(MYSQL_DATABASE_NAME) 
+	$link = mysqli_connect(MYSQL_SERVER_HOSTNAME, MYSQL_USER, MYSQL_PASSWD)
+		or die('Could not connect: ' . mysqli_error($link));
+	mysqli_select_db($link, MYSQL_DATABASE_NAME) 
 		or die('Could not select database');
 
 	$GLOBALS['MSG_QUEUE'] = array();
@@ -61,17 +61,18 @@
 	
 	function fetchFromDb($sSql, $bRow = false)
 	{
-		$result = mysql_query($sSql) or die('Query failed: ' . mysql_error());
+	        global $link;
+		$result = mysqli_query($link, $sSql) or die('Query failed: ' . mysqli_error($link));
 
 		if ($bRow == false)
 		{
 			$a = array();
-			while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) 
+			while ($line = mysqli_fetch_array($result, MYSQLI_ASSOC)) 
 				$a[] = $line;
 			return $a;
 		}
 		else
-			return mysql_fetch_array($result, MYSQL_ASSOC);
+			return mysqli_fetch_array($result, MYSQLI_ASSOC);
 	}
 	
 	
