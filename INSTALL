@@ -15,6 +15,7 @@ REQUIREMENTS:
 
 - Smarty template engine (http://smarty.php.net)
 
+- Pager/Pager.php (php-pager on Ubuntu)
 
 
 INSTALLATION STEPS:
