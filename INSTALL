@@ -36,13 +36,13 @@ FIRST INSTALLATION:
    
    I assume this final directory structure:
    /var/www/localhost/home_inventory/
-   /var/www/localhost/home_inventory/htdocs		<---- web server shoult point here
-   /var/www/localhost/home_inventory/images/items <---- picture uploads go here, to be created
-   /var/www/localhost/home_inventory/smarty		<---- smarty base directory
-   /var/www/localhost/home_inventory/smarty/templates	<---- .tpl repository
+   /var/www/localhost/home_inventory/htdocs		         <---- web server should point here
+   /var/www/localhost/home_inventory/htdocs/images/items <---- picture uploads go here
+   /var/www/localhost/home_inventory/smarty	  	         <---- smarty base directory
+   /var/www/localhost/home_inventory/smarty/templates	   <---- .tpl repository
    /var/www/localhost/home_inventory/smarty/templates_c	<---- compiled .tpl
    /var/www/localhost/home_inventory/smarty/configs		<---- empty but needed!
-   /var/www/localhost/home_inventory/smarty/cache		<---- empty but needed!
+   /var/www/localhost/home_inventory/smarty/cache		   <---- empty but needed!
    
    so that you can access by typing http://your_server/home_inventory/htdocs, where you_server
    is your server's host name.
