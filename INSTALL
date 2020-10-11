@@ -15,7 +15,7 @@ REQUIREMENTS:
 
 - Smarty template engine (http://smarty.php.net)
 
-- Pager/Pager.php (php-pager on Ubuntu)
+- Pager/Pager.php (https://pear.php.net/package/Pager)
 
 
 INSTALLATION STEPS:
@@ -37,13 +37,14 @@ FIRST INSTALLATION:
    I assume this final directory structure:
    /var/www/localhost/home_inventory/
    /var/www/localhost/home_inventory/htdocs		<---- web server shoult point here
+   /var/www/localhost/home_inventory/images/items <---- picture uploads go here, to be created
    /var/www/localhost/home_inventory/smarty		<---- smarty base directory
    /var/www/localhost/home_inventory/smarty/templates	<---- .tpl repository
    /var/www/localhost/home_inventory/smarty/templates_c	<---- compiled .tpl
    /var/www/localhost/home_inventory/smarty/configs		<---- empty but needed!
    /var/www/localhost/home_inventory/smarty/cache		<---- empty but needed!
    
-   so that you can access by typing http://your_server/home_inventory, where you_server
+   so that you can access by typing http://your_server/home_inventory/htdocs, where you_server
    is your server's host name.
 	
 2) Run mysql logging in with your administrator account and create 
@@ -59,7 +60,7 @@ FIRST INSTALLATION:
    needed tables or enter the following command into the bash shell:
    $ mysql -u homeinv -p < install.sql
 
-4) Open /environment.php and edit the following constants with your
+4) Open htdocs/config.php and edit the following constants with your
    installation path, server hostname, MySQL choosed password, and username/password to
    login into home inventory:
 
@@ -80,7 +81,7 @@ FIRST INSTALLATION:
 5) Make sure file permissions are correctly set in the directory (directory is
    world readable and executable and files are all world readable, e.g.)
 
-6) Go to http://your_server/home_inventory and enjoy!!
+6) Go to http://your_server/home_inventory/htdocs and enjoy!!
 
 
 
@@ -108,6 +109,6 @@ and that the database name was 'home_inventory'.
 5) Delete smarty cache:
 	rm -f /var/www/localhost/home_inventory/smarty/templates_c/*
 
-6) Go to http://your_server/home_inventory and test the new installation.
+6) Go to http://your_server/home_inventory/htdocs and test the new installation.
    If all is fine delete old directory  /var/www/localhost/home_inventory_OLD/
 

@@ -37,7 +37,7 @@ CREATE TABLE `Item` (
   `ITM_LocationId` int(11) default NULL,
   `ITM_LendToId` int(11) default NULL,
   `ITM_LendDate` date default NULL,
-  `ITM_InsertDate` datetime NOT NULL default '0000-00-00 00:00:00',
+  `ITM_InsertDate` datetime NOT NULL,
   `ITM_Quantity` smallint(6) default NULL,
   `ITM_Brand` varchar(40) default NULL,
   `ITM_Model` varchar(40) default NULL,
@@ -75,5 +75,3 @@ CREATE TABLE `Picture` (
 ENGINE=InnoDB 
 DEFAULT CHARSET=latin1 
 COMMENT='Item''s Picture';
-
-

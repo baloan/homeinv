@@ -15,5 +15,5 @@ define('MYSQL_SERVER_HOSTNAME', 'your_hostname');
 define('HOMEINV_USERNAME', 'username');
 define('HOMEINV_PASSWD', 'passwd');	
 
-// default accepted picture size 120KB
-define('PICTURE_MAXSIZE', 122880);
+// default accepted picture size 5MB
+define('PICTURE_MAXSIZE', 5000000);
